@@ -3,7 +3,7 @@ name: Github Action No. 4
 on:
   push:
     branches: ["main"]
-  # Allos us to run worflow from UI
+  # Allos us to run worflow from UI  
   workflow_dispatch:
 
 permissions:
@@ -26,7 +26,7 @@ jobs:
       - name: Build Project
         run: npm run build
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v1 
         with:
           path: ./build
   deploy:
@@ -39,3 +39,4 @@ jobs:
       - name: Deploy to Github pages
         id: deployment
         uses: actions/deploy-pages@v1
+
